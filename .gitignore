@@ -108,7 +108,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# SPECIFIC
 *.pdf
+pythondm/ueb03/config.py
 
 # Spyder project settings
 .spyderproject

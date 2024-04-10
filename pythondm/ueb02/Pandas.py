@@ -28,12 +28,12 @@ print("-------------------------------------------------------------------------
 # 2.1
 better_print(df["Eigenschaft B"], "2.1 (1)")
 better_print(df.loc["Produkt B"], "2.1 (2)")
-better_print(df.at["Produkt A", "Userbewertung"], "2.1 (3)")
+better_print(df.loc["Produkt A", "Userbewertung"], "2.1 (3)")
 better_print(df[df["Eigenschaft C"] > 3], "2.1 (4)")
 better_print(df[df["Userbewertung"] > 5]["Eigenschaft B"], "2.1 (5)")
 
 # 2.2
-df.index = [0, 1, 2]
+df.index = range(0, len(df))
 better_print(df, "2.2")
 better_print(df.head(1), "first")
 better_print(df.tail(1), "last")
@@ -65,7 +65,7 @@ for col in df.columns:
     better_print(df[col], col)
 
 # 3.3
-doubled_df = df.map(lambda x: x * 2)
+doubled_df = df.map(lambda row: row * 2)
 better_print(doubled_df, "3.3 double df")
 print(df)
 
